@@ -8,6 +8,7 @@
 
 #import "LCCListViewController.h"
 #import "AppDelegate.h"
+#import "LCCTableViewCell.h"
 
 @interface LCCListViewController () <UITableViewDataSource, UITableViewDelegate>
 @property NSManagedObjectContext *moc;
@@ -64,7 +65,6 @@
 //        request.predicate = [NSPredicate predicateWithFormat:@"prowess <= 5"];
 //    }
 
-
     //request.sortDescriptors = @[sortDescriptor, sortDescriptor2];
 
     self.lostCharacters = [self.moc executeFetchRequest:request error:nil];
@@ -84,9 +84,10 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     NSManagedObject *character = self.lostCharacters[indexPath.row];
-    UITableViewCell *cell = [self.charactersTableView dequeueReusableCellWithIdentifier:@"CellID"];
-    cell.textLabel.text = [warrior valueForKey:@"passenger"];
-    cell.detailTextLabel.text = [warrior valueForKey:@"actor"];
+    LCCTableViewCell *cell = [self.charactersTableView dequeueReusableCellWithIdentifier:@"CharacterCellID"];
+    cell.passengerLabel.text = [character valueForKey:@"passenger"];
+    cell.actorLabel.text = [character valueForKey:@"actor"];
+
     return cell;
 }
 
