@@ -9,6 +9,7 @@
 #import "LCCDetailViewController.h"
 
 @interface LCCDetailViewController () <UIImagePickerControllerDelegate>
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -36,7 +37,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
 
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    //self.imageView.image = chosenImage;
+    self.imageView.image = chosenImage;
 
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
