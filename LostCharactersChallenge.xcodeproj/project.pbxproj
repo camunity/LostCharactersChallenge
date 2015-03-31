@@ -15,7 +15,7 @@
 		F35BD45C1ACB1BAF008DBB14 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F35BD45A1ACB1BAF008DBB14 /* LaunchScreen.xib */; };
 		F35BD4681ACB1BB0008DBB14 /* LostCharactersChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F35BD4671ACB1BB0008DBB14 /* LostCharactersChallengeTests.m */; };
 		F35BD4761ACB1C79008DBB14 /* LCCListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35BD4751ACB1C79008DBB14 /* LCCListViewController.m */; };
-		F35BD4781ACB1F98008DBB14 /* lost.plist in Resources */ = {isa = PBXBuildFile; fileRef = F35BD4771ACB1F98008DBB14 /* lost.plist */; };
+		F35BD47A1ACB26FA008DBB14 /* lost.plist in Resources */ = {isa = PBXBuildFile; fileRef = F35BD4791ACB26FA008DBB14 /* lost.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +43,7 @@
 		F35BD4671ACB1BB0008DBB14 /* LostCharactersChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LostCharactersChallengeTests.m; sourceTree = "<group>"; };
 		F35BD4741ACB1C79008DBB14 /* LCCListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCCListViewController.h; sourceTree = "<group>"; };
 		F35BD4751ACB1C79008DBB14 /* LCCListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCCListViewController.m; sourceTree = "<group>"; };
-		F35BD4771ACB1F98008DBB14 /* lost.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = lost.plist; path = ../../../../Downloads/lost.plist; sourceTree = "<group>"; };
+		F35BD4791ACB26FA008DBB14 /* lost.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = lost.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +101,7 @@
 		F35BD4481ACB1BAE008DBB14 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F35BD4771ACB1F98008DBB14 /* lost.plist */,
+				F35BD4791ACB26FA008DBB14 /* lost.plist */,
 				F35BD4491ACB1BAE008DBB14 /* Info.plist */,
 				F35BD44A1ACB1BAE008DBB14 /* main.m */,
 			);
@@ -231,7 +231,7 @@
 			files = (
 				F35BD4571ACB1BAF008DBB14 /* Main.storyboard in Resources */,
 				F35BD45C1ACB1BAF008DBB14 /* LaunchScreen.xib in Resources */,
-				F35BD4781ACB1F98008DBB14 /* lost.plist in Resources */,
+				F35BD47A1ACB26FA008DBB14 /* lost.plist in Resources */,
 				F35BD4591ACB1BAF008DBB14 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
