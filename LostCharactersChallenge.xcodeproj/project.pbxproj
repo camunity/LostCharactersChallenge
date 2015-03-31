@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5EB81D1A1ACB2B1C00CF6A13 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB81D191ACB2B1C00CF6A13 /* Character.m */; };
 		F35BD44B1ACB1BAE008DBB14 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F35BD44A1ACB1BAE008DBB14 /* main.m */; };
 		F35BD44E1ACB1BAE008DBB14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F35BD44D1ACB1BAE008DBB14 /* AppDelegate.m */; };
 		F35BD4511ACB1BAF008DBB14 /* LostCharactersChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F35BD44F1ACB1BAE008DBB14 /* LostCharactersChallenge.xcdatamodeld */; };
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5EB81D181ACB2B1C00CF6A13 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
+		5EB81D191ACB2B1C00CF6A13 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
 		F35BD4451ACB1BAE008DBB14 /* LostCharactersChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostCharactersChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F35BD4491ACB1BAE008DBB14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F35BD44A1ACB1BAE008DBB14 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -145,6 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				F35BD44F1ACB1BAE008DBB14 /* LostCharactersChallenge.xcdatamodeld */,
+				5EB81D181ACB2B1C00CF6A13 /* Character.h */,
+				5EB81D191ACB2B1C00CF6A13 /* Character.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F35BD44E1ACB1BAE008DBB14 /* AppDelegate.m in Sources */,
+				5EB81D1A1ACB2B1C00CF6A13 /* Character.m in Sources */,
 				F35BD4511ACB1BAF008DBB14 /* LostCharactersChallenge.xcdatamodeld in Sources */,
 				F35BD44B1ACB1BAE008DBB14 /* main.m in Sources */,
 				F35BD4761ACB1C79008DBB14 /* LCCListViewController.m in Sources */,
@@ -444,6 +450,7 @@
 				F35BD46D1ACB1BB0008DBB14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F35BD46E1ACB1BB0008DBB14 /* Build configuration list for PBXNativeTarget "LostCharactersChallengeTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +459,7 @@
 				F35BD4701ACB1BB0008DBB14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
