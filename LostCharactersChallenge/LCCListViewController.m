@@ -10,10 +10,11 @@
 #import "AppDelegate.h"
 #import "LCCTableViewCell.h"
 
-@interface LCCListViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface LCCListViewController () <UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
 @property NSManagedObjectContext *moc;
-@property NSArray *lostCharacters;
+@property NSMutableArray *lostCharacters;
 @property (strong, nonatomic) IBOutlet UITableView *charactersTableView;
+@property BOOL shouldWeDelete;
 
 @end
 
@@ -96,18 +97,42 @@
 
     if (editingStyle == UITableViewCellEditingStyleDelete) {
 
-        NSMutableArray *cellIndicesToBeDeleted = [[NSMutableArray alloc] init];
-        for (int i = 0; i < [tableView numberOfRowsInSection:0]; i++) {
-            NSIndexPath *path = [NSIndexPath indexPathWithIndex:i];
-            if ([[tableView cellForRowAtIndexPath:path] accessoryType] ==
-                UITableViewCellAccessoryCheckmark) {
-                [cellIndicesToBeDeleted addObject:path];
-            }
-        }
-        [tableView deleteRowsAtIndexPaths:cellIndicesToBeDeleted
-                         withRowAnimation:UITableViewRowAnimationLeft];
-        [cellIndicesToBeDeleted removeAllObjects];
+//        NSMutableArray *cellIndicesToBeDeleted = [[NSMutableArray alloc] init];
+//        for (int i = 0; i < [tableView numberOfRowsInSection:0]; i++) {
+//            NSIndexPath *path = [NSIndexPath indexPathWithIndex:i];
+//            if ([[tableView cellForRowAtIndexPath:path] accessoryType] ==
+//                UITableViewCellAccessoryCheckmark) {
+//                [cellIndicesToBeDeleted addObject:path];
+//            }
+//        }
+//        [tableView deleteRowsAtIndexPaths:cellIndicesToBeDeleted
+//                         withRowAnimation:UITableViewRowAnimationLeft];
+//        [cellIndicesToBeDeleted removeAllObjects];
     }
+
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Delete" message:@"Are you sure you want to delete?"
+                                                                   delegate:self
+                                                          cancelButtonTitle:@"Cancel"
+                                                          otherButtonTitles:@"Delete", nil];
+    self.shouldWeDelete = false;
+
+    [alert show];
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1)
+    {
+        NSIndexPath *indexPath = [self.charactersTableView indexPathForSelectedRow];
+        [self.lostCharacters removeObjectAtIndex:indexPath.row];
+        self.shouldWeDelete = true;
+        [self.charactersTableView reloadData];
+    }
+}
+
+-(BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{//return NO if you don't want to set the cell to be able to move
+    return true;
 }
 
 // Override to support conditional editing of the table view.
@@ -132,8 +157,8 @@
         sender.style = UIBarButtonItemStyleDone;
         sender.title = @"Done";
     }
-
 }
+
 
 -(void)setEditing:(BOOL)editing animated:(BOOL)animated
 {
@@ -143,11 +168,23 @@
 
 #pragma mark - Navigation
 
+- (BOOL) shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    if ([identifier isEqualToString:@"DetailSegue"]) {
+        if (self.editing) {
+            return NO;
+        }
+    }
+    return YES;
+}
+
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    // Get the new view controller using [segue destinationViewController].
-//    // Pass the selected object to the new view controller.
-//}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+
+}
+
+
 
 
 @end
