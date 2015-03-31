@@ -135,6 +135,8 @@
 
 }
 
+
+
 -(void)setEditing:(BOOL)editing animated:(BOOL)animated
 {
     self.charactersTableView.allowsMultipleSelectionDuringEditing = editing;
@@ -143,11 +145,23 @@
 
 #pragma mark - Navigation
 
+- (BOOL) shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    if ([identifier isEqualToString:@"DetailSegue"]) {
+        if (self.editing) {
+            return NO;
+        }
+    }
+    return YES;
+}
+
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    // Get the new view controller using [segue destinationViewController].
-//    // Pass the selected object to the new view controller.
-//}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+
+}
+
+
 
 
 @end
