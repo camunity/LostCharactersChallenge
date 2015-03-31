@@ -9,9 +9,10 @@
 #import "LCCListViewController.h"
 #import "AppDelegate.h"
 
-@interface LCCListViewController ()
+@interface LCCListViewController () <UITableViewDataSource, UITableViewDelegate>
 @property NSManagedObjectContext *moc;
 @property NSArray *lostCharacters;
+@property (strong, nonatomic) IBOutlet UITableView *charactersTableView;
 
 @end
 
@@ -43,6 +44,9 @@
     }
 }
 
+- (IBAction)addCharacter:(UITextField *)sender {
+}
+
 
 //
 //    [lostCharacter setValue:(id) forKey:@"gender"];
@@ -66,6 +70,24 @@
     self.lostCharacters = [self.moc executeFetchRequest:request error:nil];
 
     //[self.warriorTableView reloadData];
+}
+
+
+
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+
+    return self.lostCharacters.count;
+}
+
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    NSManagedObject *character = self.lostCharacters[indexPath.row];
+    UITableViewCell *cell = [self.charactersTableView dequeueReusableCellWithIdentifier:@"CellID"];
+    cell.textLabel.text = [warrior valueForKey:@"passenger"];
+    cell.detailTextLabel.text = [warrior valueForKey:@"actor"];
+    return cell;
 }
 
 #pragma mark - Navigation
