@@ -7,8 +7,11 @@
 //
 
 #import "LCCListViewController.h"
+#import "AppDelegate.h"
 
 @interface LCCListViewController ()
+@property NSManagedObjectContext *moc;
+@property NSArray *lostCharacters;
 
 @end
 
@@ -17,13 +20,39 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    self.moc = appDelegate.managedObjectContext;
+    [self readData];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)readData
+{
+    //stores the path of the plist file present in the bundle
+    NSString *bundlePathofPlist = [[NSBundle mainBundle]pathForResource:@"lost" ofType:@"plist"];
+    NSArray *array = [NSArray arrayWithContentsOfFile:bundlePathofPlist];
+
+    for (NSDictionary *dict in array) {
+        NSManagedObject *lostCharacter = [NSEntityDescription insertNewObjectForEntityForName:@"Character" inManagedObjectContext:self.moc];
+        [lostCharacter setValue:dict[@"actor"] forKey:@"actor"];
+        [lostCharacter setValue:dict[@"passenger"] forKey:@"passenger"];
+        [self.moc save:nil];
+        NSLog(@"%@",[lostCharacter valueForKey:@"actor"]);
+    }
 }
 
+
+//
+//    [lostCharacter setValue:(id) forKey:@"gender"];
+//    [lostCharacter setValue:(id) forKey:@"age"];
+//    [lostCharacter setValue:(id) forKey: @"hair color"];
+
+
+
+//    for(int i =0;i<[dataFromPlist count];i++)
+//    {
+//        NSLog(@"Mobile handset no %d is %@",i+1,[dataFromPlist objectAtIndex:i]);
+//    }
+//}
 /*
 #pragma mark - Navigation
 

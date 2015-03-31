@@ -10,11 +10,12 @@
 		F35BD44B1ACB1BAE008DBB14 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F35BD44A1ACB1BAE008DBB14 /* main.m */; };
 		F35BD44E1ACB1BAE008DBB14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F35BD44D1ACB1BAE008DBB14 /* AppDelegate.m */; };
 		F35BD4511ACB1BAF008DBB14 /* LostCharactersChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F35BD44F1ACB1BAE008DBB14 /* LostCharactersChallenge.xcdatamodeld */; };
-		F35BD4541ACB1BAF008DBB14 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35BD4531ACB1BAF008DBB14 /* ViewController.m */; };
 		F35BD4571ACB1BAF008DBB14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F35BD4551ACB1BAF008DBB14 /* Main.storyboard */; };
 		F35BD4591ACB1BAF008DBB14 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F35BD4581ACB1BAF008DBB14 /* Images.xcassets */; };
 		F35BD45C1ACB1BAF008DBB14 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F35BD45A1ACB1BAF008DBB14 /* LaunchScreen.xib */; };
 		F35BD4681ACB1BB0008DBB14 /* LostCharactersChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F35BD4671ACB1BB0008DBB14 /* LostCharactersChallengeTests.m */; };
+		F35BD4761ACB1C79008DBB14 /* LCCListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35BD4751ACB1C79008DBB14 /* LCCListViewController.m */; };
+		F35BD4781ACB1F98008DBB14 /* lost.plist in Resources */ = {isa = PBXBuildFile; fileRef = F35BD4771ACB1F98008DBB14 /* lost.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +35,15 @@
 		F35BD44C1ACB1BAE008DBB14 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F35BD44D1ACB1BAE008DBB14 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F35BD4501ACB1BAE008DBB14 /* LostCharactersChallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LostCharactersChallenge.xcdatamodel; sourceTree = "<group>"; };
-		F35BD4521ACB1BAF008DBB14 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F35BD4531ACB1BAF008DBB14 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F35BD4561ACB1BAF008DBB14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F35BD4581ACB1BAF008DBB14 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F35BD45B1ACB1BAF008DBB14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F35BD4611ACB1BB0008DBB14 /* LostCharactersChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LostCharactersChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F35BD4661ACB1BB0008DBB14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F35BD4671ACB1BB0008DBB14 /* LostCharactersChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LostCharactersChallengeTests.m; sourceTree = "<group>"; };
+		F35BD4741ACB1C79008DBB14 /* LCCListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCCListViewController.h; sourceTree = "<group>"; };
+		F35BD4751ACB1C79008DBB14 /* LCCListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCCListViewController.m; sourceTree = "<group>"; };
+		F35BD4771ACB1F98008DBB14 /* lost.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = lost.plist; path = ../../../../Downloads/lost.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,14 +85,14 @@
 		F35BD4471ACB1BAE008DBB14 /* LostCharactersChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				F35BD4731ACB1C35008DBB14 /* Model */,
+				F35BD4721ACB1C32008DBB14 /* View */,
+				F35BD4711ACB1C30008DBB14 /* Controller */,
 				F35BD44C1ACB1BAE008DBB14 /* AppDelegate.h */,
 				F35BD44D1ACB1BAE008DBB14 /* AppDelegate.m */,
-				F35BD4521ACB1BAF008DBB14 /* ViewController.h */,
-				F35BD4531ACB1BAF008DBB14 /* ViewController.m */,
 				F35BD4551ACB1BAF008DBB14 /* Main.storyboard */,
 				F35BD4581ACB1BAF008DBB14 /* Images.xcassets */,
 				F35BD45A1ACB1BAF008DBB14 /* LaunchScreen.xib */,
-				F35BD44F1ACB1BAE008DBB14 /* LostCharactersChallenge.xcdatamodeld */,
 				F35BD4481ACB1BAE008DBB14 /* Supporting Files */,
 			);
 			path = LostCharactersChallenge;
@@ -99,6 +101,7 @@
 		F35BD4481ACB1BAE008DBB14 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F35BD4771ACB1F98008DBB14 /* lost.plist */,
 				F35BD4491ACB1BAE008DBB14 /* Info.plist */,
 				F35BD44A1ACB1BAE008DBB14 /* main.m */,
 			);
@@ -120,6 +123,30 @@
 				F35BD4661ACB1BB0008DBB14 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F35BD4711ACB1C30008DBB14 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F35BD4741ACB1C79008DBB14 /* LCCListViewController.h */,
+				F35BD4751ACB1C79008DBB14 /* LCCListViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		F35BD4721ACB1C32008DBB14 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F35BD4731ACB1C35008DBB14 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F35BD44F1ACB1BAE008DBB14 /* LostCharactersChallenge.xcdatamodeld */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +231,7 @@
 			files = (
 				F35BD4571ACB1BAF008DBB14 /* Main.storyboard in Resources */,
 				F35BD45C1ACB1BAF008DBB14 /* LaunchScreen.xib in Resources */,
+				F35BD4781ACB1F98008DBB14 /* lost.plist in Resources */,
 				F35BD4591ACB1BAF008DBB14 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,8 +252,8 @@
 			files = (
 				F35BD44E1ACB1BAE008DBB14 /* AppDelegate.m in Sources */,
 				F35BD4511ACB1BAF008DBB14 /* LostCharactersChallenge.xcdatamodeld in Sources */,
-				F35BD4541ACB1BAF008DBB14 /* ViewController.m in Sources */,
 				F35BD44B1ACB1BAE008DBB14 /* main.m in Sources */,
+				F35BD4761ACB1C79008DBB14 /* LCCListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
