@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LCCListViewController.h
 //  LostCharactersChallenge
 //
 //  Created by Cameron Flowers on 3/31/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface LCCListViewController : UIViewController
 
 @end
-
