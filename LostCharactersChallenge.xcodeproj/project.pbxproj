@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5EB81D1A1ACB2B1C00CF6A13 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB81D191ACB2B1C00CF6A13 /* Character.m */; };
 		5EB81D1D1ACB2F0B00CF6A13 /* LCCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB81D1C1ACB2F0B00CF6A13 /* LCCTableViewCell.m */; };
+		6B513E181ACB44E900973A6C /* LCCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B513E171ACB44E900973A6C /* LCCDetailViewController.m */; };
 		F35BD44B1ACB1BAE008DBB14 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F35BD44A1ACB1BAE008DBB14 /* main.m */; };
 		F35BD44E1ACB1BAE008DBB14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F35BD44D1ACB1BAE008DBB14 /* AppDelegate.m */; };
 		F35BD4511ACB1BAF008DBB14 /* LostCharactersChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F35BD44F1ACB1BAE008DBB14 /* LostCharactersChallenge.xcdatamodeld */; };
@@ -35,6 +36,8 @@
 		5EB81D191ACB2B1C00CF6A13 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
 		5EB81D1B1ACB2F0B00CF6A13 /* LCCTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCCTableViewCell.h; sourceTree = "<group>"; };
 		5EB81D1C1ACB2F0B00CF6A13 /* LCCTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCCTableViewCell.m; sourceTree = "<group>"; };
+		6B513E161ACB44E900973A6C /* LCCDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCCDetailViewController.h; sourceTree = "<group>"; };
+		6B513E171ACB44E900973A6C /* LCCDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCCDetailViewController.m; sourceTree = "<group>"; };
 		F35BD4451ACB1BAE008DBB14 /* LostCharactersChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostCharactersChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F35BD4491ACB1BAE008DBB14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F35BD44A1ACB1BAE008DBB14 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -96,9 +99,7 @@
 				F35BD4711ACB1C30008DBB14 /* Controller */,
 				F35BD44C1ACB1BAE008DBB14 /* AppDelegate.h */,
 				F35BD44D1ACB1BAE008DBB14 /* AppDelegate.m */,
-				F35BD4551ACB1BAF008DBB14 /* Main.storyboard */,
 				F35BD4581ACB1BAF008DBB14 /* Images.xcassets */,
-				F35BD45A1ACB1BAF008DBB14 /* LaunchScreen.xib */,
 				F35BD4481ACB1BAE008DBB14 /* Supporting Files */,
 			);
 			path = LostCharactersChallenge;
@@ -136,6 +137,8 @@
 			children = (
 				F35BD4741ACB1C79008DBB14 /* LCCListViewController.h */,
 				F35BD4751ACB1C79008DBB14 /* LCCListViewController.m */,
+				6B513E161ACB44E900973A6C /* LCCDetailViewController.h */,
+				6B513E171ACB44E900973A6C /* LCCDetailViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -143,6 +146,8 @@
 		F35BD4721ACB1C32008DBB14 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F35BD4551ACB1BAF008DBB14 /* Main.storyboard */,
+				F35BD45A1ACB1BAF008DBB14 /* LaunchScreen.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -262,6 +267,7 @@
 			files = (
 				5EB81D1D1ACB2F0B00CF6A13 /* LCCTableViewCell.m in Sources */,
 				F35BD44E1ACB1BAE008DBB14 /* AppDelegate.m in Sources */,
+				6B513E181ACB44E900973A6C /* LCCDetailViewController.m in Sources */,
 				5EB81D1A1ACB2B1C00CF6A13 /* Character.m in Sources */,
 				F35BD4511ACB1BAF008DBB14 /* LostCharactersChallenge.xcdatamodeld in Sources */,
 				F35BD44B1ACB1BAE008DBB14 /* main.m in Sources */,

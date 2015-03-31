@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5cD-Ca-FGx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5cD-Ca-FGx">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -163,6 +163,7 @@
                                             <outlet property="ageLabel" destination="j3Y-9V-tC6" id="m4K-go-5rz"/>
                                             <outlet property="characterImage" destination="Z3s-3R-6EL" id="7z0-Ro-0Qi"/>
                                             <outlet property="passengerLabel" destination="LYY-dV-lEL" id="PYt-Ve-Gz8"/>
+                                            <segue destination="vzr-pT-UwB" kind="show" id="UGu-Rj-xxm"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -204,6 +205,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1030" y="353"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="r4s-Zs-O0r">
+            <objects>
+                <viewController id="vzr-pT-UwB" customClass="LCCDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PLm-mK-IvN"/>
+                        <viewControllerLayoutGuide type="bottom" id="o5s-KK-mgV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Du-mJ-2uY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h56-TT-ZqS">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Select Picture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="139" y="285" width="122" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="onSelectPictureButtonPressed:" destination="vzr-pT-UwB" eventType="touchUpInside" id="jx4-9r-PsB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="h56-TT-ZqS"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="h56-TT-ZqS"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GzS-3M-7dZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1684.5" y="353"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wFE-bI-3re">
