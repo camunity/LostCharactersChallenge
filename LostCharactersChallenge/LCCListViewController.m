@@ -91,6 +91,56 @@
     return cell;
 }
 
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+
+        NSMutableArray *cellIndicesToBeDeleted = [[NSMutableArray alloc] init];
+        for (int i = 0; i < [tableView numberOfRowsInSection:0]; i++) {
+            NSIndexPath *path = [NSIndexPath indexPathWithIndex:i];
+            if ([[tableView cellForRowAtIndexPath:path] accessoryType] ==
+                UITableViewCellAccessoryCheckmark) {
+                [cellIndicesToBeDeleted addObject:path];
+            }
+        }
+        [tableView deleteRowsAtIndexPaths:cellIndicesToBeDeleted
+                         withRowAnimation:UITableViewRowAnimationLeft];
+        [cellIndicesToBeDeleted removeAllObjects];
+    }
+}
+
+// Override to support conditional editing of the table view.
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return NO if you do not want the specified item to be editable.
+    return YES;
+}
+
+- (IBAction)onEditButtonPressed:(UIBarButtonItem *)sender {
+
+    if (self.editing) {
+        self.editing = false;
+        [self.charactersTableView setEditing:NO animated:YES];
+        sender.style = UIBarButtonItemStylePlain;
+        sender.title = @"Edit";
+    }
+
+    else
+    {
+        self.editing = true;
+        [self.charactersTableView setEditing:YES animated:YES];
+        sender.style = UIBarButtonItemStyleDone;
+        sender.title = @"Done";
+    }
+
+}
+
+-(void)setEditing:(BOOL)editing animated:(BOOL)animated
+{
+    self.charactersTableView.allowsMultipleSelectionDuringEditing = editing;
+    [super setEditing:editing animated:animated];
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
