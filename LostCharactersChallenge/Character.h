@@ -10,12 +10,14 @@
 #import <CoreData/CoreData.h>
 
 
-@interface Character : NSManagedObject
+@interface Character : NSObject
 
 @property (nonatomic, retain) NSString * actor;
 @property (nonatomic, retain) NSNumber * age;
 @property (nonatomic, retain) NSString * gender;
 @property (nonatomic, retain) NSString * haircolor;
 @property (nonatomic, retain) NSString * passenger;
+
+- (instancetype)initWithNSManagedObject:(NSManagedObject *)character;
 
 @end

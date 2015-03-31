@@ -17,4 +17,15 @@
 @dynamic haircolor;
 @dynamic passenger;
 
+- (instancetype)initWithNSManagedObject:(NSManagedObject *)character {
+    self = [super init];
+    if (self) {
+        self.actor = [character valueForKey:@"actor"];
+        self.passenger = [character valueForKey:@"passenger"];
+    }
+
+    return self;
+}
+
+
 @end
