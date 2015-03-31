@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface LCCTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *characterImage;
+@property (weak, nonatomic) IBOutlet UILabel *actorLabel;
+@property (weak, nonatomic) IBOutlet UILabel *ageLabel;
+@property (weak, nonatomic) IBOutlet UILabel *passengerLabel;
 
 @end
